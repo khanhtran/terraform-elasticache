@@ -10,18 +10,25 @@ variable "cidr_blocks" {
 
 variable "namespace" {
   description = "Default namespace"
+  default = "khanh"
 }
 
 variable "cluster_id" {
   description = "Id to assign the new cluster"
 }
 
-variable "public_key_path" {
-  description = "Path to public key for ssh access"
-  default     = "~/.ssh/id_rsa.pub"
-}
-
 variable "node_groups" {
   description = "Number of nodes groups to create in the cluster"
-  default     = 3
+  default     = 1
+}
+
+variable "vpc_id" {
+  description = "VPC id"
+  default     = "vpc-0bf95010f1cd5f60a"
+}
+
+variable subnet_ids {
+  type        = list(string)
+  description = "subnet ids"
+  default     = ["subnet-0488f2b2afec8e5a2"]
 }

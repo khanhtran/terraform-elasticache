@@ -1,5 +1,3 @@
 namespace = "elasticache-tutorial"
-
 cluster_id = "redis-cluster"
-
-node_groups = 3
+node_groups = 1
